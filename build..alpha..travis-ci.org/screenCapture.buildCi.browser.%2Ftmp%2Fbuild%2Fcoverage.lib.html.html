@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-david/david/lib/version.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-david/node_modules/david/lib/version.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-david">npmtest-david (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-david/david/lib/version.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-david/node_modules/david/lib/version.js</span></h1>
     <h2>
         
         Statements: <span class="metric">34.29% <small>(12 / 35)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-david/david/lib/</a> &#187; version.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-david/node_modules/david/lib/</a> » version.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -399,8 +397,8 @@ var unstablePattern = /[a-z+-]/i
  * @param {String} version
  * @return {Boolean}
  */
-<span class="fstat-no" title="function not covered" >function isStable (version) {</span>
-<span class="cstat-no" title="statement not covered" >  return !unstablePattern.test(version || '')</span>
+<span class="fstat-no" title="function not covered">function isStable (version) {</span>
+<span class="cstat-no" title="statement not covered">  return !unstablePattern.test(version || '')</span>
 }
 &nbsp;
 exports.isStable = isStable
@@ -410,12 +408,12 @@ exports.isStable = isStable
  * @param {String} version
  * @return {Boolean}
  */
-<span class="fstat-no" title="function not covered" >function isScm (version) {</span>
-<span class="cstat-no" title="statement not covered" >  var scmPrefixes = ['git:', 'git+ssh:', 'https:', 'git+https:']</span>
-<span class="cstat-no" title="statement not covered" >  var blacklisted = scmPrefixes.filter(<span class="fstat-no" title="function not covered" >function (prefix) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return version.indexOf(prefix) === 0</span>
+<span class="fstat-no" title="function not covered">function isScm (version) {</span>
+<span class="cstat-no" title="statement not covered">  var scmPrefixes = ['git:', 'git+ssh:', 'https:', 'git+https:']</span>
+<span class="cstat-no" title="statement not covered">  var blacklisted = scmPrefixes.filter(<span class="fstat-no" title="function not covered">function (prefix) {</span></span>
+<span class="cstat-no" title="statement not covered">    return version.indexOf(prefix) === 0</span>
   })
-<span class="cstat-no" title="statement not covered" >  return !!blacklisted.length</span>
+<span class="cstat-no" title="statement not covered">  return !!blacklisted.length</span>
 }
 &nbsp;
 exports.isScm = isScm
@@ -425,15 +423,15 @@ exports.isScm = isScm
  * @param {Array} versions
  * @return {String}
  */
-<span class="fstat-no" title="function not covered" >function getLatestStable (versions) {</span>
-<span class="cstat-no" title="statement not covered" >  versions = versions.slice()</span>
-<span class="cstat-no" title="statement not covered" >  while (versions.length) {</span>
-<span class="cstat-no" title="statement not covered" >    var version = versions.pop()</span>
-<span class="cstat-no" title="statement not covered" >    if (isStable(version)) {</span>
-<span class="cstat-no" title="statement not covered" >      return version</span>
+<span class="fstat-no" title="function not covered">function getLatestStable (versions) {</span>
+<span class="cstat-no" title="statement not covered">  versions = versions.slice()</span>
+<span class="cstat-no" title="statement not covered">  while (versions.length) {</span>
+<span class="cstat-no" title="statement not covered">    var version = versions.pop()</span>
+<span class="cstat-no" title="statement not covered">    if (isStable(version)) {</span>
+<span class="cstat-no" title="statement not covered">      return version</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  return null</span>
+<span class="cstat-no" title="statement not covered">  return null</span>
 }
 &nbsp;
 exports.getLatestStable = getLatestStable
@@ -445,44 +443,45 @@ exports.getLatestStable = getLatestStable
  * @param {Object} opts Options
  * @param {Boolean} [opts.loose] Use loose option when querying semver
  */
-<span class="fstat-no" title="function not covered" >function getLatest (current, versions, opts) {</span>
-<span class="cstat-no" title="statement not covered" >  var stable = current</span>
-<span class="cstat-no" title="statement not covered" >  var latest = versions[versions.length - 1]</span>
+<span class="fstat-no" title="function not covered">function getLatest (current, versions, opts) {</span>
+<span class="cstat-no" title="statement not covered">  var stable = current</span>
+<span class="cstat-no" title="statement not covered">  var latest = versions[versions.length - 1]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!isStable(stable)) {</span>
-<span class="cstat-no" title="statement not covered" >    stable = getLatestStable(versions)</span>
+<span class="cstat-no" title="statement not covered">  if (!isStable(stable)) {</span>
+<span class="cstat-no" title="statement not covered">    stable = getLatestStable(versions)</span>
   }
 &nbsp;
   // getLatestStable might not have found a stable version
-<span class="cstat-no" title="statement not covered" >  if (stable) {</span>
+<span class="cstat-no" title="statement not covered">  if (stable) {</span>
     // Latest is the most recent version with higher version than stable
-<span class="cstat-no" title="statement not covered" >    for (var i = versions.length - 1; i &gt;= 0; i--) {</span>
+<span class="cstat-no" title="statement not covered">    for (var i = versions.length - 1; i &gt;= 0; i--) {</span>
       // If !opts.loose then this may throw
-<span class="cstat-no" title="statement not covered" >      if (semver.gt(versions[i], stable, opts.loose)) {</span>
-<span class="cstat-no" title="statement not covered" >        latest = versions[i]</span>
-<span class="cstat-no" title="statement not covered" >        break</span>
+<span class="cstat-no" title="statement not covered">      if (semver.gt(versions[i], stable, opts.loose)) {</span>
+<span class="cstat-no" title="statement not covered">        latest = versions[i]</span>
+<span class="cstat-no" title="statement not covered">        break</span>
       }
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return { latest: latest, stable: stable }</span>
+<span class="cstat-no" title="statement not covered">  return { latest: latest, stable: stable }</span>
 }
 &nbsp;
 exports.getLatest = getLatest
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getVersionsInRange (range, versions, loose) {</span>
-<span class="cstat-no" title="statement not covered" >  return versions.filter(<span class="fstat-no" title="function not covered" >function (v) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return semver.satisfies(v, range, loose)</span>
+<span class="fstat-no" title="function not covered">function getVersionsInRange (range, versions, loose) {</span>
+<span class="cstat-no" title="statement not covered">  return versions.filter(<span class="fstat-no" title="function not covered">function (v) {</span></span>
+<span class="cstat-no" title="statement not covered">    return semver.satisfies(v, range, loose)</span>
   })
 }
 &nbsp;
 exports.getVersionsInRange = getVersionsInRange
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 21:32:42 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 16:55:14 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
