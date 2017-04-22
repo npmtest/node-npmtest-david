@@ -1,4 +1,7 @@
-# test coverage for  [david (v11.0.0)](https://github.com/alanshaw/david#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-david.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-david) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-david.svg)](https://travis-ci.org/npmtest/node-npmtest-david)
+# npmtest-david
+
+#### basic test-coverage for  [david (v11.0.0)](https://github.com/alanshaw/david#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-david.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-david) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-david.svg)](https://travis-ci.org/npmtest/node-npmtest-david)
+
 #### Node.js module that tells you when your project npm dependencies are out of date.
 
 [![NPM](https://nodei.co/npm/david.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/david)
